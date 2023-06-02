@@ -1,7 +1,7 @@
 # Install Jenkins on AWS EC2
 Jenkins is an open-source automation server that integrates with a number of AWS Services, including: AWS CodeCommit, AWS CodeDeploy, Amazon EC2 Spot, and Amazon EC2 Fleet. You can use Amazon Elastic Compute Cloud (Amazon EC2) to deploy a Jenkins application on AWS.
 
-### Prerequisites
+## Prerequisites
 1. EC2 Instance 
    - With Internet Access
    - Security Group with Port `8080` open for internet
@@ -42,16 +42,17 @@ Jenkins is an open-source automation server that integrates with a number of AWS
    ```sh
   http://YOUR-SERVER-PUBLIC-IP:8080
    ```
-#### Configure Jenkins
+## Configure Jenkins
 - After you login to Jenkins,
 - Run the command to copy the Jenkins Admin Password 
 - Password Location:`/var/lib/jenkins/secrets/initialAdminPassword`
 - Install suggested plugins; Wait for the Jenkins to Install suggested plugins
 - Create First Admin User or Skip the step [If you want to use this Jenkins instance for future use-cases as well, better to create admin user]
+- Add jenkins user in linux to sudoers group. `sudo usermod -a -G wheel jenkins`
 
-Jenkins Installation is Successful. You can now starting using the Jenkins
+### Jenkins Installation is Successful!!!!!
 
-### Test Jenkins Jobs
+## Test Jenkins Jobs
 1. Create “new item”
 1. Enter an item name – `My-First-Project`
    - Chose `Freestyle` project
