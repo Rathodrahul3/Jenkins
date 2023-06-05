@@ -13,35 +13,33 @@ Jenkins is an open-source automation server that integrates with a number of AWS
    
 ### Run the below commands to install Java and Jenkins
  
-  1. Install Java
+ 1. Install Java
    ```
    amazon-linux-extras install epel 
    amazon-linux-extras install java-openjdk11  
    ```
-  2. Verify Java is Installed
+ 2. Verify Java is Installed
    ```
    java -version
    ```
-  3. Now, you can proceed with installing Jenkins
+ 3. Now, you can proceed with installing Jenkins
    ```
    sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
    sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io-2023.key
    sudo yum update
    sudo yum install jenkins
    ```
-  4. Start Jenkins
+ 4. Start Jenkins
    ```
    #Start jenkins service
    sudo systemctl start jenkins
    
    # Setup Jenkins to start at boot.
    sudo systemctl enable jenkins
-    ```
-  5. Login to Jenkins.
-  By default jenkins runs at port `8080`, You can access jenkins at 
-   ```sh
-  http://YOUR-SERVER-PUBLIC-IP:8080
    ```
+ 5. Login to Jenkins.
+  By default jenkins runs at port `8080`, You can access jenkins at 
+   ``` http://YOUR-SERVER-PUBLIC-IP:8080 ```
 ## Configure Jenkins
 - After you login to Jenkins,
 - Run the command to copy the Jenkins Admin Password 
